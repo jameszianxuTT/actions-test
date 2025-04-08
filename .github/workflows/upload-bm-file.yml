@@ -21,7 +21,7 @@ jobs:
             lfs: true
             
         - name: "ls"
-          run: ls -lshR ${{ github.workspace }}
+          run: ls -lashR ${{ github.workspace }}
 
         - uses: actions/upload-artifact@v4
           with:
