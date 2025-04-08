@@ -19,8 +19,11 @@ jobs:
           with:
             submodules: recursive
             lfs: true
+            
+        - name: "ls"
+          run: ls -lshR ${{ github.workspace }}
 
         - uses: actions/upload-artifact@v4
           with:
             name: ${{ inputs.benchmark_report_path }}
-            path: ${{ inputs.benchmark_report_path }}
+            path: "${{ github.workspace }}/${{ inputs.benchmark_report_path }}"
